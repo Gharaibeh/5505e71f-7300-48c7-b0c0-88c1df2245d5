@@ -24,6 +24,10 @@ namespace ConsoleApp1
             Console.ReadLine();
         }
 
+        /// <summary>
+        /// Print out the results
+        /// </summary>
+        /// <param name="output"></param>
         static void printResult(string output)
         {
             Console.WriteLine("The positive devisors are :\n" + output);

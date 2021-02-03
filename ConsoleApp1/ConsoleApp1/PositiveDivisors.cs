@@ -14,6 +14,11 @@ namespace ConsoleApp1
             //Empty Cons
         }
 
+        /// <summary>
+        /// Deciding if Prime or not
+        /// </summary>
+        /// <param name="n"></param>
+        /// <returns></returns>
         public bool IsPrime(int n)
         {
             if (n == 2) return true;
@@ -25,6 +30,11 @@ namespace ConsoleApp1
 
             return true;
         }
+        /// <summary>
+        /// Listing all divisors
+        /// </summary>
+        /// <param name="n"></param>
+        /// <returns></returns>
         public string returnDivisors(int n)
         {
             if (n < 0)
