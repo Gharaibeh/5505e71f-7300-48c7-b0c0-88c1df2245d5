@@ -15,6 +15,7 @@ namespace ConsoleApp1
                 PositiveDivisors devisors = new PositiveDivisors();
                 printResult(devisors.returnDivisors(60));
                 printResult(devisors.returnDivisors(42));
+                printResult(devisors.returnDivisors(100));
             }
             catch (Exception ex)
             {
