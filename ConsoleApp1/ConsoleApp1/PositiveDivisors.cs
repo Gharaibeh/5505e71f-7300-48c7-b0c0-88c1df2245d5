@@ -11,7 +11,7 @@ namespace ConsoleApp1
 
         public PositiveDivisors()
         {
-
+            //Empty Cons
         }
 
         public bool IsPrime(int n)
