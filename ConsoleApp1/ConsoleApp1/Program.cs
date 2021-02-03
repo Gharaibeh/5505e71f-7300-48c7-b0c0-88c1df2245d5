@@ -10,13 +10,21 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            PositiveDivisors devisors = new PositiveDivisors();
-            printResult(devisors.getNumberDivisors(20));
+            try
+            {
+                PositiveDivisors devisors = new PositiveDivisors();
+                printResult(devisors.returnDivisors(60));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+            Console.ReadLine();
         }
 
         static void printResult(string output)
         {
-            Console.WriteLine("The positive devisors re :\n" + output);
+            Console.WriteLine("The positive devisors are :\n" + output);
         }
     }
 }

@@ -9,22 +9,45 @@ namespace ConsoleApp1
     class PositiveDivisors
     {
 
-        List<int> divisors;
-
         public PositiveDivisors()
         {
-            InitializeComponents();
 
         }
-        private void InitializeComponents()
+      
+        public bool IsPrime(int n)
         {
-            divisors = new List<int>();
+            if (n == 2) return true;
+            if (n % 2 == 0) return false;
+
+            for (int x = 3; x * x <= n; x += 2)
+                if (n % x == 0)
+                    return false;
+
+            return true;
         }
-
-
-        public string getNumberDivisors(int n)
+        public string returnDivisors(int n)
         {
+            List<int> divisors = new List<int>();
 
+            if (n < 2)
+            {
+                return null;
+            }
+            else if (IsPrime(n))
+            {
+                return null;
+            }
+            else
+            {
+                for (int i = 2; i < n; i++)
+                    if (n % i == 0)
+                        divisors.Add(i);
+            }
+
+            StringBuilder _devisors = new StringBuilder();
+            foreach (int div in divisors)
+                _devisors.Append(div+" ");
+            return _devisors.ToString();
         }
     }
 }
