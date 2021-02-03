@@ -33,6 +33,15 @@ namespace UnitTestProject
             Assert.AreEqual(result, "1 2 4 5 10 20 25 50 100 ");
 
         }
-         
+
+        [TestMethod]
+        public void TestCase04()
+        {
+            PositiveDivisors devisors = new PositiveDivisors();
+            var ex = Assert.ThrowsException<Exception>(() => devisors.returnDivisors(-15));
+            Assert.AreSame(ex.Message, "Must be positive int value, Bad input format!");
+
+        }
+
     }
 }

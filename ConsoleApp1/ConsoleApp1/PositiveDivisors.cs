@@ -13,7 +13,7 @@ namespace ConsoleApp1
         {
 
         }
-      
+
         public bool IsPrime(int n)
         {
             if (n == 2) return true;
@@ -27,6 +27,11 @@ namespace ConsoleApp1
         }
         public string returnDivisors(int n)
         {
+            if (n < 0)
+            {
+                throw new Exception("Must be positive int value, Bad input format!");
+
+            }
             List<int> divisors = new List<int>();
 
             if (n < 2)
@@ -46,7 +51,7 @@ namespace ConsoleApp1
 
             StringBuilder _devisors = new StringBuilder();
             foreach (int div in divisors)
-                _devisors.Append(div+" ");
+                _devisors.Append(div + " ");
             return _devisors.ToString();
         }
     }
